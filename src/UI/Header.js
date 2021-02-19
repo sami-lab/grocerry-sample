@@ -492,11 +492,11 @@ function Header(props) {
           aria-owns="mobile-menu"
           aria-haspopup={true}
           color="inherit"
-          onClick={(e) => props.setOpenDrawer(e.currentTarget)}
+          onClick={(e) => props.setOpenDrawer((va) => !va)}
           style={{ marginRight: matchesSM ? 0 : '0.5em' }}
           disableFocusRipple
         >
-          <Avatar>SA</Avatar>
+          <Avatar src="/assets/profile.jpg" />
         </IconButton>
       </Grid>
       <SwipeableDrawer
@@ -601,9 +601,10 @@ function Header(props) {
             justify="space-between"
             alignItems="center"
             className={classes.AppBar}
+            style={{ flexWrap: 'nowrap' }}
           >
             {/* Toggle ICon */}
-            <Grid item md={1} xs={4}>
+            <Grid item md={1} xs={3} style={{ justifyContent: 'center' }}>
               <Button
                 component={'a'}
                 href="#"
@@ -622,7 +623,7 @@ function Header(props) {
             <Grid
               item
               md={11}
-              xs={8}
+              xs={9}
               style={{ alignSelf: matchesMD ? undefined : 'flex-end' }}
             >
               <Hidden mdDown>{tabs}</Hidden>

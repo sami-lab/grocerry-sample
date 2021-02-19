@@ -21,8 +21,6 @@ export default function About() {
         >
           Go to the main page
         </Button>
-        <ProTip />
-        <Copyright />
       </Box>
     </Container>
   );
