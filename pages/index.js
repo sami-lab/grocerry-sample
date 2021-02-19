@@ -518,10 +518,19 @@ export default function Index() {
         </Grid>
         <style global jsx>{`
           ::-webkit-scrollbar {
-            width: 20px; /* <-- This sets the thickness of the VERTICAL scrollbar */
-            height: 20px; /* <-- This sets the thickness of the HORIZONTAL scrollbar */
-            color: '#5DEB88';
-            background-color: '#5DEB88';
+            width: 10px;
+            height: 10px;
+            border: 1px solid #d5d5d5;
+          }
+
+          ::-webkit-scrollbar-track {
+            border-radius: 0;
+            background: #eeeeee;
+          }
+
+          ::-webkit-scrollbar-thumb {
+            border-radius: 5px;
+            background: #bdbdbd;
           }
         `}</style>
       </Grid>
