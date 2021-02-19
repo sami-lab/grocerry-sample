@@ -12,6 +12,7 @@ import thme from '../src/theme';
 export default function MyApp(props) {
   const theme = useTheme();
   const matchesSM = useMediaQuery(theme.breakpoints.down('sm'));
+  const matchesMD = useMediaQuery(theme.breakpoints.down('down'));
   const [openDrawer, setOpenDrawer] = useState(false);
 
   const { Component, pageProps } = props;
@@ -22,8 +23,11 @@ export default function MyApp(props) {
     if (jssStyles) {
       jssStyles.parentElement.removeChild(jssStyles);
     }
-    if (!matchesSM) setOpenDrawer(true);
   }, []);
+  React.useEffect(() => {
+    if (matchesSM) setOpenDrawer(false);
+    else setOpenDrawer(true);
+  }, [matchesSM]);
   return (
     <React.Fragment>
       <Head>

@@ -267,7 +267,7 @@ function Header(props) {
                 size="small"
                 className={classes.input}
                 style={{
-                  width: '40ch',
+                  width: matchesMD ? '30ch' : '30ch',
                   borderColor: 'black',
                   borderWidth: '1em',
                   borderRadius: '50%',
